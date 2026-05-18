@@ -12,7 +12,7 @@ public class DatabaseManager {
     String url;
 
     public DatabaseManager(WolkenDBApi plugin){
-        url = plugin.getConfig().getString("url");
+        url = plugin.getConfig().getString("url");;
     }
 
     public void connect(){
