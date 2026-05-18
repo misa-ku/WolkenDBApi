@@ -68,7 +68,7 @@
         <repository>
             <id>github</id>
             <name>misa-ku</name>
-            <url>https://maven.pkg.github.com/misa-ku/REPOSITORY</url>
+            <url>https://maven.pkg.github.com/misa-ku/WolkenDBApi</url>
         </repository>
     </distributionManagement>
     <dependencies>
