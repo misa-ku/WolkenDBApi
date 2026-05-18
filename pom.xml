@@ -41,6 +41,14 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.1</version>
+                <configuration>
+                    <outputDirectory>C:\Users\Misaku\Desktop\paper-server_1-21-4\plugins</outputDirectory>
+                </configuration>
+            </plugin>
         </plugins>
         <resources>
             <resource>
@@ -56,13 +64,25 @@
             <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
     </repositories>
-
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>misa-ku</name>
+            <url>https://maven.pkg.github.com/misa-ku/REPOSITORY</url>
+        </repository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>7.0.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

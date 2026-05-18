@@ -1,6 +1,7 @@
-package org.misaku.wolkenDBApi;
+package org.misaku.wolkenDBApi.manager;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.misaku.wolkenDBApi.WolkenDBApi;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -8,10 +9,15 @@ import java.sql.SQLException;
 public class DatabaseManager {
 
     private HikariDataSource dataSource;
+    String url;
+
+    public DatabaseManager(WolkenDBApi plugin){
+        url = plugin.getConfig().getString("url");
+    }
 
     public void connect(){
         this.dataSource = new HikariDataSource();
-        this.dataSource.setJdbcUrl("jdbc:postgresql://neondb_owner:npg_B02ZRlAjLhMi@ep-billowing-smoke-alj20fz5-pooler.c-3.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require");
+        this.dataSource.setJdbcUrl(url);
         this.dataSource.setMaximumPoolSize(10);
     }
 
