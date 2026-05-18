@@ -1,0 +1,4 @@
+name: WolkenDBApi
+version: '1.0'
+main: org.misaku.wolkenDBApi.WolkenDBApi
+api-version: '1.21'
